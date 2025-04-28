@@ -1,4 +1,6 @@
 #!/sbin/sh
+source ./banner.sh
+printBanner
 echo "Setting up tools ......"
 cd /tmp
 sleep 0.5
