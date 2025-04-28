@@ -1,1 +1,1 @@
-# ANdroid-15_DualBoot_ABpartition
+# Android 15 Dual Boot - for A/B Devices
