@@ -1,16 +1,10 @@
 #!/sbin/sh
 source ./banner.sh
+source ./0_MountTools.sh
 printBanner
 
 slot=$(bootctl get-current-slot)
-echo "Setting up tools ......"
-cd /tmp
-sleep 0.5
-mkdir tools
-sleep 0.5
-mount /dev/block/sda24 tools/
-sleep 0.5
-cd tools
+mountTools
 echo "Done"
 if [ "$slot" -eq 0 ]; then
     echo "Setting up Partitions"
@@ -20,6 +14,7 @@ if [ "$slot" -eq 0 ]; then
     sleep 0.5
     dd if=metadata_b.img of=/dev/block/by-name/metadata
     echo "Done"
+    putTools
     sleep 0.5
     echo "==================Importent=================="
     echo "1> Now reboot into Recovery again."
@@ -33,6 +28,7 @@ else
     sleep 0.5
     dd if=metadata_a.img of=/dev/block/by-name/metadata
     echo "Done"
+    putTools
     sleep 0.5
     echo "==================Importent=================="
     echo "1> Now reboot into Recovery again."

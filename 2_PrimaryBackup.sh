@@ -1,16 +1,10 @@
 #!/sbin/sh
 source ./banner.sh
+source ./0_MountTools.sh
 printBanner
 
 slot=$(bootctl get-current-slot)
-echo "Setting up tools ......"
-cd /tmp
-sleep 0.5
-mkdir tools
-sleep 0.5
-mount /dev/block/sda24 tools/
-sleep 0.5
-cd tools
+mountTools
 echo "Done"
 if [ "$slot" -eq 0 ]; then
     echo "Current boot slot is: A"
@@ -53,6 +47,7 @@ else
     dd if=/dev/block/by-name/recovery_b of=recovery_b.img
     sleep 0.5
 fi
+putTools
 echo "==================Importent=================="
 echo "1> Now flash secondary OS zip"
 if [ "$slot" -eq 0 ]; then

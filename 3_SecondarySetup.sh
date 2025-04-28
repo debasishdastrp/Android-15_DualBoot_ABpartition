@@ -1,16 +1,10 @@
 #!/sbin/sh
 source ./banner.sh
+source ./0_MountTools.sh
 printBanner
 
 slot=$(bootctl get-current-slot)
-echo "Setting up tools ......"
-cd /tmp
-sleep 0.5
-mkdir tools
-sleep 0.5
-mount /dev/block/sda24 tools/
-sleep 0.5
-cd tools
+mountTools
 echo "Done"
 echo "Re-writing recovery images......"
 dd if=/tmp/tools/recovery_a.img of=/dev/block/by-name/recovery_a
@@ -31,6 +25,7 @@ else
     ./parted /dev/block/sda "name 23 userdata"
     sleep 0.5
 fi
+putTools
 sleep 0.5
 echo "==================Importent=================="
 echo "1> Now reboot to system will take you to secondary os"
