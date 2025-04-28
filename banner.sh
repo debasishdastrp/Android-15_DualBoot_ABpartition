@@ -3,9 +3,9 @@ printBanner()
 {
     drawLine
 cat<<EOF
+  
+Clicks and Bits
 
-Cʟɪᴄᴋs ᴀɴᴅ Bɪᴛs                                                                          
-                                                                                                        
 EOF
 drawLine
 }

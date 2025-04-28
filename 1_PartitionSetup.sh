@@ -1,4 +1,7 @@
 #!/sbin/sh
+source ./banner.sh
+printBanner
+
 slot=$(bootctl get-current-slot)
 echo "Unmounting Data Partition ......."
 umount /data

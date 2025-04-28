@@ -1,4 +1,7 @@
 #!/sbin/sh
+source ./banner.sh
+printBanner
+
 echo -n "What is the current boot slot (a/b): "
 read currentslot
 echo "Setting up tools ......"
