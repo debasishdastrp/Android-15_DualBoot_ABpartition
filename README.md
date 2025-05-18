@@ -62,7 +62,7 @@
     cp ../mkfs.ext4 ./
     chmod +x ./*
 
-<span style="color:yellow"> **Step-1, Step-2 and Step-3 has been implemented in 1_PartitionSetup.sh script** </span>
+**Step-1, Step-2 and Step-3 has been implemented in 1_PartitionSetup.sh script**
 
 ## 4.	Primary OS Setup
 4.1.	Format the data partition in TWRP recovery
