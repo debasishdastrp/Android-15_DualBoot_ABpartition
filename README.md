@@ -62,7 +62,7 @@
     cp ../mkfs.ext4 ./
     chmod +x ./*
 
-**Step-1, Step-2 and Step-3 has been implemented in 1_PartitionSetup.sh script**
+➡️**Step-1, Step-2 and Step-3 has been implemented in 1_PartitionSetup.sh script**
 
 ## 4.	Primary OS Setup
 4.1.	Format the data partition in TWRP recovery
@@ -83,7 +83,7 @@
 > can use the terminal available in TWRP recovery also. I found the ADB
 > shell comfortable.
 
-**Step-4 has been implemented in 2_PrimaryBackup.sh script**
+➡️**Step-4 has been implemented in 2_PrimaryBackup.sh script**
 ## 5.	Secondary OS Setup
 5.1.	Flash the secondary OS zip (e.g. Lineage OS) using TWRP recovery
 5.2.	Download and copy recovery image of secondary OS to tools partition using following ADB command
@@ -110,7 +110,7 @@
 > automatically. E.g. if slot a is current active slot then slot b will
 > be set active for next boot.
 
-**Step-5 has been implemented in 3_SecondarySetup.sh & 4_SecondaryBackup.sh script**
+➡️**Step-5 has been implemented in 3_SecondarySetup.sh & 4_SecondaryBackup.sh script**
 
 ## 6.	Switching Between Slots
 There are few things I need to mention before starting this section. 
@@ -149,7 +149,7 @@ f)	Reboot to system. Secondary OS should boot this time.
 > pretty painful. To reduce this strain, I will try to build a script
 > and place that in the system somewhere.
 
-**This option has been implemented in 5_SwitchP2S.sh script**
+➡️**This option has been implemented in 5_SwitchP2S.sh script**
 
  
 
@@ -177,4 +177,4 @@ g)	Reboot to system. Secondary OS should boot this time.
 > pretty painful. To reduce this strain, I will try to build a script
 > and place that in the system somewhere.
 
-**This option has been implemented in 6_SwitchS2P.sh script**
+➡️**This option has been implemented in 6_SwitchS2P.sh script**
